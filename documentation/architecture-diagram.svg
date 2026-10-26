@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" width="1000" height="650" style="background:#07090e; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="grad-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0891b2"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="grad-card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="30" y="25" width="940" height="70" rx="8" fill="url(#grad-card)" stroke="#1e293b" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="55" y="60" fill="#06b6d4" font-size="22" font-weight="800" letter-spacing="-0.5">ARINC 718A MARK 4 MODE S TRANSPONDER SYSTEM ARCHITECTURE</text>
+  <text x="55" y="80" fill="#94a3b8" font-size="12">Dual-Redundant Transponder Architecture, Comm-B BDS Register Matrix &amp; ARINC 429 Ingestion</text>
+
+  <!-- Left: Avionics Inputs & Cockpit TCU -->
+  <rect x="30" y="115" width="280" height="495" rx="8" fill="url(#grad-card)" stroke="#1e293b" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="30" y="115" width="280" height="38" rx="8" fill="#1e293b"/>
+  <text x="50" y="140" fill="#f8fafc" font-size="14" font-weight="700">COCKPIT &amp; AVIONICS SENSORS</text>
+
+  <!-- Cockpit Control Panel TCU -->
+  <rect x="50" y="170" width="240" height="85" rx="6" fill="#18202c" stroke="#334155"/>
+  <text x="65" y="195" fill="#38bdf8" font-size="12" font-weight="700">Cockpit TCU (ARINC 718A)</text>
+  <text x="65" y="215" fill="#94a3b8" font-size="11">• Squawk Code BCD (4 Digits)</text>
+  <text x="65" y="235" fill="#94a3b8" font-size="11">• Mode: STBY / ALT ON / TA/RA</text>
+
+  <!-- ADIRU 1 & 2 -->
+  <rect x="50" y="270" width="240" height="85" rx="6" fill="#18202c" stroke="#334155"/>
+  <text x="65" y="295" fill="#34d399" font-size="12" font-weight="700">Dual ADIRU Sensors (ARINC 738)</text>
+  <text x="65" y="315" fill="#94a3b8" font-size="11">• Label 203: Pressure Altitude</text>
+  <text x="65" y="335" fill="#94a3b8" font-size="11">• Label 206/205: Airspeed &amp; Mach</text>
+
+  <!-- TCAS II Computer -->
+  <rect x="50" y="370" width="240" height="85" rx="6" fill="#18202c" stroke="#334155"/>
+  <text x="65" y="395" fill="#fbbf24" font-size="12" font-weight="700">TCAS II Computer (ARINC 735B)</text>
+  <text x="65" y="415" fill="#94a3b8" font-size="11">• Label 013: Coordination</text>
+  <text x="65" y="435" fill="#94a3b8" font-size="11">• Label 015: Advisory / RA Status</text>
+
+  <!-- Flight Guidance / MCP -->
+  <rect x="50" y="470" width="240" height="85" rx="6" fill="#18202c" stroke="#334155"/>
+  <text x="65" y="495" fill="#c084fc" font-size="12" font-weight="700">Flight Guidance / MCP / FCU</text>
+  <text x="65" y="515" fill="#94a3b8" font-size="11">• Selected Altitude Intent</text>
+  <text x="65" y="535" fill="#94a3b8" font-size="11">• Barometric Altimeter Setting</text>
+
+  <!-- Middle: Dual Transponder Core LRUs -->
+  <rect x="340" y="115" width="320" height="495" rx="8" fill="url(#grad-card)" stroke="#0891b2" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="115" width="320" height="38" rx="8" fill="#0891b2"/>
+  <text x="360" y="140" fill="#ffffff" font-size="14" font-weight="800">MARK 4 MODE S TRANSPONDER (4-MCU)</text>
+
+  <rect x="360" y="170" width="280" height="120" rx="6" fill="#1e293b" stroke="#334155"/>
+  <text x="375" y="195" fill="#10b981" font-size="13" font-weight="700">TRANSPONDER 1 (CAPTAIN)</text>
+  <text x="375" y="215" fill="#cbd5e1" font-size="11">• Mode S Interrogation Decoder (1030 MHz)</text>
+  <text x="375" y="235" fill="#cbd5e1" font-size="11">• Reply &amp; ADS-B Squitter Transmitter (1090 MHz)</text>
+  <text x="375" y="255" fill="#cbd5e1" font-size="11">• 24-Bit ICAO Address Parity Generator</text>
+  <text x="375" y="275" fill="#10b981" font-size="11" font-weight="600">STATUS: ACTIVE ONLINE (ARINC 429 BUS A)</text>
+
+  <rect x="360" y="305" width="280" height="120" rx="6" fill="#1e293b" stroke="#334155"/>
+  <text x="375" y="330" fill="#94a3b8" font-size="13" font-weight="700">TRANSPONDER 2 (FIRST OFFICER)</text>
+  <text x="375" y="350" fill="#94a3b8" font-size="11">• Identical Independent Standby Unit</text>
+  <text x="375" y="370" fill="#94a3b8" font-size="11">• Automatic Cross-Talk Bus Heartbeat</text>
+  <text x="375" y="390" fill="#94a3b8" font-size="11">• Seamless Bus Switchover on Unit 1 Failure</text>
+  <text x="375" y="410" fill="#f59e0b" font-size="11" font-weight="600">STATUS: HOT STANDBY (ARINC 429 BUS B)</text>
+
+  <!-- Antenna Diversity Switch -->
+  <rect x="360" y="445" width="280" height="135" rx="6" fill="#18202c" stroke="#334155"/>
+  <text x="375" y="470" fill="#06b6d4" font-size="12" font-weight="700">RF Diversity &amp; Antenna Switching</text>
+  <text x="375" y="490" fill="#94a3b8" font-size="11">• Top Monopole Antenna (Air-to-Air / TCAS)</text>
+  <text x="375" y="510" fill="#94a3b8" font-size="11">• Bottom Monopole Antenna (Air-to-Ground Radar)</text>
+  <text x="375" y="530" fill="#94a3b8" font-size="11">• Dynamic Pulse-by-Pulse Diversity Arbitration</text>
+  <text x="375" y="555" fill="#34d399" font-size="11" font-weight="600">RTCA DO-181E / TSO-C112e COMPLIANT</text>
+
+  <!-- Right: Comm-B Data Selector (BDS) Registers -->
+  <rect x="690" y="115" width="280" height="495" rx="8" fill="url(#grad-card)" stroke="#1e293b" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="690" y="115" width="280" height="38" rx="8" fill="#1e293b"/>
+  <text x="710" y="140" fill="#f8fafc" font-size="14" font-weight="700">COMM-B BDS REGISTERS (56-BIT)</text>
+
+  <rect x="710" y="170" width="240" height="60" rx="4" fill="#18202c" stroke="#334155"/>
+  <text x="725" y="190" fill="#38bdf8" font-size="11" font-weight="700">BDS 1,0: Capability Report</text>
+  <text x="725" y="208" fill="#94a3b8" font-size="10">Level 4 Transponder, Diversity, EHS</text>
+
+  <rect x="710" y="240" width="240" height="60" rx="4" fill="#18202c" stroke="#334155"/>
+  <text x="725" y="260" fill="#38bdf8" font-size="11" font-weight="700">BDS 2,0: Aircraft ID (Callsign)</text>
+  <text x="725" y="278" fill="#94a3b8" font-size="10">8 x 6-bit Characters: "UAE123  "</text>
+
+  <rect x="710" y="310" width="240" height="60" rx="4" fill="#18202c" stroke="#334155"/>
+  <text x="725" y="330" fill="#fbbf24" font-size="11" font-weight="700">BDS 3,0: ACAS Resolution Advisory</text>
+  <text x="725" y="348" fill="#94a3b8" font-size="10">Active RA Sense &amp; Complement</text>
+
+  <rect x="710" y="380" width="240" height="60" rx="4" fill="#18202c" stroke="#334155"/>
+  <text x="725" y="400" fill="#34d399" font-size="11" font-weight="700">BDS 4,0: Selected Vertical Intent</text>
+  <text x="725" y="418" fill="#94a3b8" font-size="10">MCP/FCU Target Altitude &amp; Baro</text>
+
+  <rect x="710" y="450" width="240" height="60" rx="4" fill="#18202c" stroke="#334155"/>
+  <text x="725" y="470" fill="#c084fc" font-size="11" font-weight="700">BDS 5,0: Track &amp; Turn Report</text>
+  <text x="725" y="488" fill="#94a3b8" font-size="10">Roll Angle, Track, Ground Speed</text>
+
+  <rect x="710" y="520" width="240" height="60" rx="4" fill="#18202c" stroke="#334155"/>
+  <text x="725" y="540" fill="#f43f5e" font-size="11" font-weight="700">BDS 6,0: Heading &amp; Speed</text>
+  <text x="725" y="558" fill="#94a3b8" font-size="10">Mag Heading, IAS, Mach, Baro Rate</text>
+</svg>
